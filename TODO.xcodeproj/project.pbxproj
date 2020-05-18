@@ -13,6 +13,8 @@
 		0F1FDE04245337BF00A3347C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1FDE02245337BF00A3347C /* Main.storyboard */; };
 		0F1FDE06245337C100A3347C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F1FDE05245337C100A3347C /* Assets.xcassets */; };
 		0F1FDE09245337C100A3347C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1FDE07245337C100A3347C /* LaunchScreen.storyboard */; };
+		0F1FDE122453386600A3347C /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FDE112453386600A3347C /* Todo.swift */; };
+		0F1FDE1424534CD600A3347C /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FDE1324534CD600A3347C /* CreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		0F1FDE05245337C100A3347C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F1FDE08245337C100A3347C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F1FDE0A245337C100A3347C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F1FDE112453386600A3347C /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		0F1FDE1324534CD600A3347C /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		0F723F1B24573B53001CD0D1 /* TODO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TODO.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +61,26 @@
 		0F1FDDFB245337BF00A3347C /* TODO */ = {
 			isa = PBXGroup;
 			children = (
+				0F723F1B24573B53001CD0D1 /* TODO.entitlements */,
 				0F1FDDFC245337BF00A3347C /* AppDelegate.swift */,
 				0F1FDDFE245337BF00A3347C /* SceneDelegate.swift */,
 				0F1FDE00245337BF00A3347C /* ViewController.swift */,
+				0F1FDE102453384A00A3347C /* Model */,
 				0F1FDE02245337BF00A3347C /* Main.storyboard */,
+				0F1FDE1324534CD600A3347C /* CreateViewController.swift */,
 				0F1FDE05245337C100A3347C /* Assets.xcassets */,
 				0F1FDE07245337C100A3347C /* LaunchScreen.storyboard */,
 				0F1FDE0A245337C100A3347C /* Info.plist */,
 			);
 			path = TODO;
+			sourceTree = "<group>";
+		};
+		0F1FDE102453384A00A3347C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F1FDE112453386600A3347C /* Todo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F1FDE1424534CD600A3347C /* CreateViewController.swift in Sources */,
 				0F1FDE01245337BF00A3347C /* ViewController.swift in Sources */,
 				0F1FDDFD245337BF00A3347C /* AppDelegate.swift in Sources */,
 				0F1FDDFF245337BF00A3347C /* SceneDelegate.swift in Sources */,
+				0F1FDE122453386600A3347C /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +302,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TODO/TODO.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TODO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -292,6 +313,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hadinorouzi.TODO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,7 +323,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TODO/TODO.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TODO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +334,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hadinorouzi.TODO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
